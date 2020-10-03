@@ -23,7 +23,7 @@ ENV DISPLAY :0
 WORKDIR /root/
 RUN wget -O - https://github.com/novnc/noVNC/archive/v1.2.0.tar.gz | tar -xzv -C /root/ && mv /root/noVNC-1.2.0 /root/novnc && ln -s /root/novnc/vnc_lite.html /root/novnc/index.html
 RUN wget -O - https://github.com/novnc/websockify/archive/v0.9.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.9.0 /root/novnc/utils/websockify
-RUN wget -O https://ftp.mozilla.org/pub/firefox/releases/81.0/win32/en-US/Firefox%20Installer.exe /root/prefix32
+RUN wget "https://ftp.mozilla.org/pub/firefox/releases/81.0/win32/en-US/Firefox%20Installer.exe" /root/prefix32
 
 
 EXPOSE 80
